@@ -8,11 +8,11 @@ on:
       - 'master'
 
 jobs:
- 
   Checkout:
     steps:
       - name: checkout
         uses: cloudbees-io/checkout@v1
+        shell: sh
         with:
           ref: ${cloudbees.pull_request.head_sha}
       - name: Say hello
