@@ -14,7 +14,7 @@ jobs:
       - name: checkout
         uses: cloudbees-io/checkout@v1
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${cloudbees.pull_request.head_sha}
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
